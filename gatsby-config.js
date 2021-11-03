@@ -3,5 +3,15 @@ module.exports = {
     siteUrl: "https://www.yourdomain.tld",
     title: "shopee",
   },
-  plugins: ["gatsby-plugin-react-helmet"],
+  plugins: [
+    "gatsby-plugin-react-helmet",
+    {
+      resolve: "gatsby-plugin-react-svg",
+      options: {
+        rule: {
+          include: /svgs/
+        }
+      }
+    }
+  ],
 };
