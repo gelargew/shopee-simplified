@@ -1,8 +1,12 @@
 main {
     display: flex;
-    justify-content: center;
+    flex-direction: column;
+    place-items: center;
     margin: 1rem 1rem;
+    gap: 1.5rem;
 }
+
+/* SECTION 1 - NEWS */
 
 #section-news {
     display: grid;
@@ -73,4 +77,112 @@ main {
 
 #promo-links a img {
     width: 70%;
+}
+
+
+/* SECTION 2 - CATEGORY */
+
+#section-categories {
+    position: relative;
+    background: white;
+    display: flex;
+    flex-direction: column;
+    box-shadow: 1px 1px rgba(0, 0, 0, 0.233);
+    border-radius: 2px;
+    height: 260px;
+    width: 100%;
+}
+
+#section-categories h3 {
+    padding: 10px;
+    line-height: 20px;
+    margin: 0;
+}
+
+#category-list {
+    position: relative;
+    display: flex;
+    overflow-x: hidden;
+    flex-direction: column;
+    align-content: flex-start;
+    flex-wrap: wrap;
+}
+
+
+
+#category-list a {
+    display: flex;
+    flex-direction: column;
+    place-items: center;
+    justify-content: center;
+    height: calc(50% - 2px);
+    width: 5rem;
+    border: 1px solid rgba(0, 0, 0, 0.116);
+    border-style: solid groove groove none;
+    font-size: xx-small;
+    word-wrap: break-word;
+    text-align: center;
+    text-decoration: none;
+    color: black;
+    transition: 0.3s;
+}
+
+#category-list a:hover {
+    box-shadow: 0.3px 0.3px rgba(0, 0, 0, 0.301);
+}
+
+#category-list a:hover img {
+    height: 70%;
+}
+
+#category-list a img {
+    height: 60%;
+    transition: 0.3s;
+}
+
+#section-categories>button {
+    position: absolute;
+    top: calc(50% + 20px);
+    z-index: 1;
+    border-radius: 50%;
+    height: 20px;
+    width: 20px;
+    background: white;
+    border: 0.1px solid rgba(0, 0, 0, 0.096);
+    font-weight: 100;
+    font-stretch: ultra-condensed;
+    transition: ease-out 0.2s;
+}
+
+
+.btn-left {
+    left: 0;
+    transform: translate(-30%, -50%);
+}
+
+.btn-right {
+    left: 100%;
+    transform: translate(-70%, -50%);
+}
+
+.btn-left:hover {
+    transform: scale(1.4) translate(-30%, -40%);
+    cursor: pointer;
+}
+
+.btn-right:hover {
+    transform: scale(1.4) translate(-50%, -40%);
+    cursor: pointer;
+}
+
+#section-categories:hover .btn-left {
+    transform: scale(1.4) translate(-30%, -40%);
+}
+
+#section-categories:hover .btn-right {
+    transform: scale(1.4) translate(-50%, -40%)
+}
+
+button .hidden {
+    display: none;
 }
