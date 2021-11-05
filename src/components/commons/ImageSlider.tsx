@@ -1,5 +1,6 @@
 import React, { useCallback, useEffect, useLayoutEffect, useRef, useState } from 'react'
 import '../../styles/commons.css'
+import useOnScreen from '../../utils/useOnScreen'
 
 
 export default function ImageSlider({imageURLS, className=''}: { imageURLS: any[], className?: string }) {
@@ -7,22 +8,32 @@ export default function ImageSlider({imageURLS, className=''}: { imageURLS: any[
     const navRef = useRef<HTMLDivElement>()
     const [currentImgIdx, setCurrentImageIndex] = useState(0)
 
+    const changeBulletColor = (color='white') => {
+        (navRef.current.children[currentImgIdx] as HTMLElement).style.backgroundColor = color;
+    }
+
     const handleScroll = (idx=0) => {
-        (navRef.current.children[currentImgIdx] as HTMLElement).style.backgroundColor = 'white';
-        setCurrentImageIndex(idx)
+        if (idx != currentImgIdx) {
+            changeBulletColor('white')
+            setCurrentImageIndex(idx)
+        }
     }
 
     useLayoutEffect(() => {
-        (navRef.current.children[currentImgIdx] as HTMLElement).style.backgroundColor = 'orange';
-        ref.current.children[currentImgIdx].scrollIntoView({ behavior: 'smooth', block: 'nearest' });
-        const imageTimeout = setTimeout(() => {
-            (navRef.current.children[currentImgIdx] as HTMLElement).style.backgroundColor = 'white';
-            setCurrentImageIndex((currentImgIdx + 1) % imageURLS.length)
+        changeBulletColor('orange')
+        ref.current.scrollBy({
+            behavior: 'smooth',
+            left: ref.current.children[currentImgIdx].getBoundingClientRect().left - ref.current.getBoundingClientRect().left
+        })
+        const imageTimeout = setTimeout(() => {       
+            changeBulletColor('white')
+            setCurrentImageIndex((currentImgIdx + 1) % imageURLS.length)              
         }, 3000)
 
         return () => clearTimeout(imageTimeout)
 
     }, [currentImgIdx])
+
 
     return (
         <div className={`img-slider-container ${className}`}>

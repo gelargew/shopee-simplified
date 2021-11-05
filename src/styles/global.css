@@ -6,3 +6,11 @@ html, body {
 main {
     height: 200vh;
 }
+
+main > section {
+    max-width: 900px;
+}
+
+main > section * {
+    background: white;
+}

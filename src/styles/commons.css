@@ -28,6 +28,7 @@
     display: flex;
     gap: 0.5rem;
     transform: translateX(-50%);
+    background: none;
 }
 
 .img-slider-nav button {
@@ -39,6 +40,6 @@
     margin: 0;
 }
 
-.img-slider-nav button:active {
-    background: orange;
+.img-slider-nav button:hover {
+    cursor: pointer;
 }

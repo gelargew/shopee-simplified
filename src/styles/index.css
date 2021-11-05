@@ -186,3 +186,43 @@ main {
 button .hidden {
     display: none;
 }
+
+
+
+/* SECTION- MALL */
+
+#section-mall {
+    height: 400px;
+    display: grid;
+    grid-template-areas: 
+    "header text text"
+    "image image products";
+    grid-template-columns: 150px 1fr 3fr;
+    grid-template-rows: auto 300px;
+    text-align: center;
+}
+
+#section-mall > * {
+    width: 100%;
+    height: 100%;
+    margin: 0;
+}
+
+#section-mall h3 {
+    grid-area: header;
+}
+
+#section-mall > span {
+    grid-area: text;
+    text-align: center;
+    font-size: small;
+}
+
+#section-mall .img-slider-container {
+    grid-area: image;
+}
+
+#section-mall > #mall-products {
+    grid-area: products;
+    border-left: 0.1px groove rgba(0, 0, 0, 0.096);
+}
