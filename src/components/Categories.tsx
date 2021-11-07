@@ -93,14 +93,14 @@ export default function Categories() {
     
     const scrollRight = () => {
         categoriesRef.current.scrollBy({
-            left: 500,
+            left: 320,
             behavior: 'smooth'
         })
     }
 
     const scrollLeft = () => {
         categoriesRef.current.scrollBy({
-            left: -500,
+            left: -320,
             behavior: 'smooth'
         })
     }
