@@ -1,3 +1,14 @@
+
+
+:root {
+    --color-bg-main: rgb(241, 241, 241);
+    --color-accent-main : rgba(255, 86, 35, 0.925);
+    --color-text-main: black;
+    --color-text-accent: white;
+    --color-shadow: rgba(0, 0, 0, 0.233);
+
+}
+
 html, body {
     margin: 0;
     background: rgb(241, 241, 241);

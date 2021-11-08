@@ -24,13 +24,13 @@ main {
 }
 
 #section-news > * {
-    background: linear-gradient(180deg, red, rgba(255, 86, 35, 0.925));
+    background: linear-gradient(180deg, red, var(--color-accent-main));
     display: flex;
     place-items: center;
     width: 100%;
     height: 100%;
     justify-content: space-around;
-    color: white;
+    color: var(--color-text-accent);
     border-radius: 2px;
 }
 
@@ -49,8 +49,8 @@ main {
 #promo-links {
     grid-area: promo-links;
     background: white;
-    color: black;
-    box-shadow: 1px 1px rgba(0, 0, 0, 0.233);
+    color: var(--color-text-main);
+    box-shadow: 1px 1px var(--color-shadow);
     place-items: center;
     justify-content: space-around;
 }
@@ -64,7 +64,7 @@ main {
     height: 80%;
     font-size: xx-small;
     text-decoration: none;
-    color: black;
+    color: var(--color-text-main);
     word-wrap: break-word;
     text-align: center;
     transition: transform 0.3s;
@@ -87,7 +87,7 @@ main {
     background: white;
     display: flex;
     flex-direction: column;
-    box-shadow: 1px 1px rgba(0, 0, 0, 0.233);
+    box-shadow: 1px 1px var(--color-shadow);
     border-radius: 2px;
     height: 260px;
     width: 100%;
@@ -117,7 +117,7 @@ main {
     justify-content: center;
     height: calc(50% - 2px);
     width: 5rem;
-    border: 1px solid rgba(0, 0, 0, 0.116);
+    border: 1px solid var(--color-shadow);
     border-style: solid groove groove none;
     font-size: xx-small;
     word-wrap: break-word;
@@ -128,7 +128,7 @@ main {
 }
 
 #category-list a:hover {
-    box-shadow: 0.3px 0.3px rgba(0, 0, 0, 0.301);
+    box-shadow: 0.3px 0.3px var(--color-shadow);
 }
 
 #category-list a:hover img {
@@ -225,4 +225,45 @@ button .hidden {
 #section-mall > #mall-products {
     grid-area: products;
     border-left: 0.1px groove rgba(0, 0, 0, 0.096);
+}
+
+/* SECTION-RECOMENDATIONS */
+
+#section-recomendations h4 {
+    margin: 0.2rem 0;
+    padding: 0.5rem 2rem;
+    box-shadow: 1px 1px 1px solid black;
+}
+
+.products {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 0.4rem;
+    background: none;
+}
+
+.product {
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    width: 120px;
+    height: 200px;
+}
+
+.product>img {
+    width: 100%;
+    height: 50%;
+}
+
+.seller-status {
+    position: absolute;
+    left: -3px;
+    top: 10%;
+    height: 12px;
+    padding: 1px 2px;
+    border-radius: 1px;
+    font-size: xx-small;
+    color: var(--color-text-accent);
+    font-weight: bold;
+    background: var(--color-accent-main);
 }
