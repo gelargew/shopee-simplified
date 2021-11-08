@@ -12,7 +12,7 @@ export default function Mall() {
 
     return (
         <section id='section-mall'>
-            <h3>SHOPEE MALL</h3>|
+            <h3>SHOPEE MALL</h3>
             <span>
                 7 Hr Pengembalian
                 100% Ori

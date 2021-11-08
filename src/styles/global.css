@@ -4,8 +4,10 @@
     --color-bg-main: rgb(241, 241, 241);
     --color-accent-main : rgba(255, 86, 35, 0.925);
     --color-text-main: black;
+    --color-text-dim: rgba(0, 0, 0, 0.4);
     --color-text-accent: white;
     --color-shadow: rgba(0, 0, 0, 0.233);
+    --color-shadow-light: rgba(0, 0, 0, 0.1);
 
 }
 
@@ -14,9 +16,6 @@ html, body {
     background: rgb(241, 241, 241);
 }
 
-main {
-    height: 200vh;
-}
 
 main > section {
     max-width: 900px;

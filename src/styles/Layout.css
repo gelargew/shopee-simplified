@@ -89,3 +89,13 @@ header .header-container {
     height: 50%;
     place-self: center;
 }
+
+footer {
+    margin-top: 5rem;
+    border-top: 2px solid var(--color-accent-main);
+    background: rgb(243, 243, 243);
+    color: var(--color-text-dim);
+    font-size: x-small;
+    max-width: 900px;
+    padding: 5rem 1rem 3rem 1rem;
+}

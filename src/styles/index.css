@@ -18,7 +18,7 @@ main {
     "news promo2"
     "promo-links promo-links";
     grid-template-columns: 2fr 1fr;
-    grid-template-rows: 1fr 1fr 1fr;
+    grid-template-rows: 50px 50px 70px;
     place-items: center;
     gap: 5px;
 }
@@ -34,7 +34,7 @@ main {
     border-radius: 2px;
 }
 
-#news-image-slider {
+.img-slider-container.news-image-slider {
     grid-area: news;
 }
 
@@ -238,21 +238,61 @@ button .hidden {
 .products {
     display: flex;
     flex-wrap: wrap;
-    gap: 0.4rem;
+    justify-content: space-between;
     background: none;
+    row-gap: 1rem;
 }
 
 .product {
     position: relative;
+    box-sizing: border-box;
     display: flex;
     flex-direction: column;
     width: 120px;
-    height: 200px;
+    height: 180px;
+    border-radius: 2px 2px 0 0;
+    box-shadow: 0.2px 0.5px 0.1px 0.2px var(--color-shadow-light);
+    transition: transform 0.2s;
+}
+
+.product:hover {
+    border: 1px solid var(--color-accent-main);
+    cursor: pointer;
+    transform: translateY(-1px);
+}
+
+.product:hover .product-accent {
+    display: block;
 }
 
 .product>img {
     width: 100%;
     height: 50%;
+}
+
+.product>p, .product>small {
+    padding-left: 0.5rem;
+    font-size: small;
+}
+
+.product-accent {
+    z-index: 1;
+    display: none;
+    position: absolute;
+    top: 100%;
+    left: 50%;
+    transform: translate(-50%, 0);
+    background: var(--color-accent-main);
+    color: var(--color-text-accent);
+    width: calc(100% + 2px);
+    text-align: center;
+    border-radius: 0 0 2px 2px;
+    font-size: x-small;
+    padding: 3px 0;
+}
+
+.price {
+    color: var(--color-accent-main);
 }
 
 .seller-status {

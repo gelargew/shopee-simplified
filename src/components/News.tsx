@@ -1,4 +1,5 @@
 import React, { useState } from 'react'
+import ImageSlider from './commons/ImageSlider'
 
 const NEWS = [
     'NEWS 1',
@@ -6,14 +7,17 @@ const NEWS = [
     'NEWS 3'
 ]
 
+const imageURLS = [
+    '/images/sale1.jpg',
+    '/images/sale2.jpg'
+]
+
 export default function News({...props}) {
     const [currentNews, setCurrentNews] = useState(NEWS[0])
 
     return (
         <section id='section-news' {...props}>
-            <div id='news-image-slider'>
-                <div id='current-news'>{currentNews}</div>
-            </div>
+            <ImageSlider className='news-image-slider' imageURLS={imageURLS} />
             <div id='promo-1'>PROMO 1</div>
             <div id='promo-2'>PROMO 2</div>
             <div id='promo-links'>

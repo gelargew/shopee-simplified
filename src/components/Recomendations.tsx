@@ -13,7 +13,7 @@ const PRODUCT =  {
     }
 
 
-const ARR = new Array(100).fill(0)
+const ARR = new Array(40).fill(0)
 
 export default function Recomendations() {
 
@@ -23,10 +23,17 @@ export default function Recomendations() {
             <div className='products'>
                 {ARR.map((num, idx) => 
                     <div key={idx} className='product'>
-                        {PRODUCT.seller.status && <div className='seller-status'>{PRODUCT.seller.status}</div>}
+                        {PRODUCT.seller.status && 
+                        <>
+                            <div className='seller-status'>
+                                {PRODUCT.seller.status}
+                            </div>
+                            <div></div>
+                        </>}
                         <img src={PRODUCT.imageURL}/>
                         <p>{PRODUCT.name}</p>
-                        <p className='price'>{PRODUCT.price}</p><small>{PRODUCT.price}</small>
+                        <small className='price'>{PRODUCT.price}</small>
+                        <div className='product-accent'>Product Serupa</div>
                     </div>)}
             </div>
         </section>
