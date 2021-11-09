@@ -25,3 +25,15 @@ main > section, .header-container {
 main > section * {
     background: white;
 }
+
+::-webkit-scrollbar {
+    width: 5px;
+    height: 5px;
+    border-radius: 2px;
+}
+
+
+::-webkit-scrollbar-thumb {
+    background: var(--color-accent-main);
+    border-radius: 2px;
+}

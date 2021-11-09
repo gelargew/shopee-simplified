@@ -12,6 +12,7 @@ export default function Layout({...props}) {
         <>
             <header>
                 <div className='header-container'>
+                    <Chat />
                     <div id='header-contact'>
                         <a href='#'>Seller Center</a>|
                         <a href='#'>Download</a>|
@@ -64,7 +65,7 @@ export default function Layout({...props}) {
                     commodi consequatur? Quis autem vel eum iure reprehenderit qui in ea voluptate velit esse quam 
                     nihil molestiae consequatur, vel illum qui dolorem eum fugiat quo voluptas nulla pariatur?</p>
             </footer>
-            <Chat />
+            
         </>
     )
 }
