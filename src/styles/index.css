@@ -10,16 +10,14 @@ main {
 
 #section-news {
     display: grid;
-    width: 100%;
-    max-width: 900px;
     grid-template-areas: 
     "news promo1"
     "news promo2"
     "promo-links promo-links";
     grid-template-columns: 2fr 1fr;
-    grid-template-rows: 50px 50px 70px;
+    grid-template-rows: 120px 120px 100px;
     place-items: center;
-    gap: 5px;
+    gap: 0.5rem;
     margin-bottom: 1rem;
 }
 
@@ -60,9 +58,9 @@ main {
     flex-direction: column;
     gap: 3px;
     place-items: center;
-    width: 50px;
+    width: 90px;
     height: 80%;
-    font-size: xx-small;
+    font-size: small;
     text-decoration: none;
     color: var(--color-text-main);
     word-wrap: break-word;
@@ -76,7 +74,7 @@ main {
 }
 
 #promo-links a img {
-    width: 70%;
+    height: 50px;
 }
 
 
@@ -89,8 +87,7 @@ main {
     flex-direction: column;
     box-shadow: 1px 1px var(--color-shadow);
     border-radius: 2px;
-    height: 260px;
-    width: 100%;
+    height: 320px;
 }
 
 #section-categories h3 {
@@ -117,10 +114,10 @@ main {
     place-items: center;
     justify-content: center;
     height: 50%;
-    width: 5rem;
+    width: 7rem;
     border: 0.4px solid rgba(0, 0, 0, 0.075);
     border-style: solid groove groove none;
-    font-size: xx-small;
+    font-size: small;
     word-wrap: break-word;
     text-align: center;
     text-decoration: none;
@@ -146,8 +143,8 @@ main {
     top: calc(50% + 20px);
     z-index: 1;
     border-radius: 50%;
-    height: 20px;
-    width: 20px;
+    height: 30px;
+    width: 30px;
     background: white;
     border: 0.1px solid rgba(0, 0, 0, 0.096);
     font-weight: 100;
@@ -193,13 +190,13 @@ button .hidden {
 /* SECTION- MALL */
 
 #section-mall {
-    height: 400px;
+    height: 500px;
     display: grid;
     grid-template-areas: 
     "header text text"
     "image image products";
-    grid-template-columns: 150px 1fr 3fr;
-    grid-template-rows: auto 300px;
+    grid-template-columns: auto 1fr 3fr;
+    grid-template-rows: auto 420px;
     text-align: center;
     box-shadow: 0.5px 1px 0.2px var(--color-shadow);
 }
@@ -212,12 +209,14 @@ button .hidden {
 
 #section-mall h3 {
     grid-area: header;
+    padding: 0.5rem 1rem;
 }
 
 #section-mall > span {
     grid-area: text;
     text-align: center;
     font-size: small;
+    padding: 0.5rem 1rem;
 }
 
 #section-mall .img-slider-container {
@@ -244,11 +243,11 @@ button .hidden {
 
 .products {
     display: grid;
-    grid-template-columns: repeat(auto-fit, 120px);
-    grid-auto-rows: 180px;
+    grid-template-columns: repeat(auto-fit, 180px);
+    grid-auto-rows: 240px;
     justify-content: space-between;
     background: none;
-    gap: 1rem 0.4rem;
+    gap: 1.6rem 0.4rem;
     width: 100%;
 }
 
@@ -257,8 +256,6 @@ button .hidden {
     box-sizing: border-box;
     display: flex;
     flex-direction: column;
-    width: 120px;
-    height: 180px;
     border-radius: 2px 2px 0 0;
     box-shadow: 0.2px 0.5px 0.1px 0.2px var(--color-shadow-light);
     transition: transform 0.2s;
@@ -276,16 +273,16 @@ button .hidden {
 
 .product>img {
     width: 100%;
-    height: 50%;
+    height: 60%;
 }
 
 .product>p, .product>small {
     padding-left: 0.5rem;
-    font-size: small;
+    font-size: medium;
 }
 
 .product-accent {
-    z-index: 1;
+    z-index: 2;
     display: none;
     position: absolute;
     top: 100%;
@@ -296,7 +293,7 @@ button .hidden {
     width: calc(100% + 2px);
     text-align: center;
     border-radius: 0 0 2px 2px;
-    font-size: x-small;
+    font-size: medium;
     padding: 3px 0;
 }
 
@@ -308,10 +305,9 @@ button .hidden {
     position: absolute;
     left: -3px;
     top: 10%;
-    height: 12px;
     padding: 1px 2px;
     border-radius: 1px;
-    font-size: xx-small;
+    font-size: small;
     color: var(--color-text-accent);
     font-weight: bold;
     background: var(--color-accent-main);
