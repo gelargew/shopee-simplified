@@ -19,7 +19,7 @@ export default function Chat() {
                 <div className='chat-box'>
                     
                 </div>
-                <textarea className='chat-input' placeholder='Tulis pesan' />
+                <textarea className='chat-input' placeholder='Tulis pesan' disabled />
                 <div className='chat-contacts'>
                     {CHAT_CONTACTS.map(contact => 
                     <div className='chat-contact' key={contact.name}>
