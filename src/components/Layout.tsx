@@ -1,4 +1,4 @@
-import React from 'react'
+import React, { useLayoutEffect } from 'react'
 import '../styles/global.css'
 import '../styles/Layout.css'
 
@@ -8,6 +8,17 @@ import Chat from './Chat'
 
 
 export default function Layout({...props}) {
+
+    useLayoutEffect(() => {
+        console.log('hhelo')
+        const ff = e => {
+            console.log(e)
+        }
+        document.querySelector('body').addEventListener('scroll', ff)
+
+        return () => document.querySelector('body').removeEventListener('scroll', ff)
+    }, [])
+
     return (
         <>
             <header>

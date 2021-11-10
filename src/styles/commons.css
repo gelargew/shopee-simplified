@@ -43,3 +43,14 @@
 .img-slider-nav button:hover {
     cursor: pointer;
 }
+
+.watermark {
+    background: none;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%) rotate(-40deg);
+    color: var(--color-shadow);
+    font-size: x-large;
+    font-weight: 900;
+}

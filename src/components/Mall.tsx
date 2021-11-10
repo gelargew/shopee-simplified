@@ -1,5 +1,6 @@
 import React from 'react'
 import ImageSlider from './commons/ImageSlider'
+import Watermark from './commons/Watermark'
 
 
 const imgURLS = [
@@ -21,6 +22,7 @@ export default function Mall() {
             <ImageSlider imageURLS={imgURLS} />
             <div id='mall-products'>
                 <h2>MALL PRODUCTS</h2>
+                <Watermark>SAMPLE</Watermark>
             </div>
         </section>
     )

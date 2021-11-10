@@ -11,7 +11,7 @@ import '../styles/index.css'
 export default function Index() {
   return (
     <Layout>
-      <main>
+      <main onScroll={()=> console.log('main')} >
         <News />
         <Categories />
         <Mall />
