@@ -228,6 +228,7 @@ button .hidden {
 }
 
 #section-mall > #mall-products {
+    position: relative;
     box-sizing: border-box;
     grid-area: products;
     border-left: 0.1px solid rgba(0, 0, 0, 0.096);
@@ -362,7 +363,6 @@ button .hidden {
     }
 
     #mall-products {
-        position: relative;
         box-sizing: border-box;
         border-top: 0.4px solid var(--color-shadow);
     }

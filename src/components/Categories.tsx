@@ -109,8 +109,8 @@ export default function Categories() {
         <section id='section-categories'>
             <h3>KATEGORI</h3>
             <div id='category-list' ref={categoriesRef}>
-                {CATEGORIES.map(category => 
-                    <a key={category.name} href='#'>
+                {CATEGORIES.map((category, idx) => 
+                    <a key={idx} href='#'>
                         <img src={category.imgURL} />
                         {category.name}
                     </a>)}

@@ -39,12 +39,12 @@ export default function ImageSlider({imageURLS, className=''}: { imageURLS: any[
         <div className={`img-slider-container ${className}`}>
             <div ref={ref} className='img-slider'>
                 {imageURLS.map(URL => 
-                    <img src={URL} className='slider-img' />
+                    <img key={URL} src={URL} className='slider-img' />
                     )}
             </div>
             <div ref={navRef} className='img-slider-nav'>
                 {imageURLS.map((URL, idx) => 
-                    <button onClick={() => handleScroll(idx)} ></button>
+                    <button key={idx} onClick={() => handleScroll(idx)} ></button>
                     )}
             </div>
         </div>
