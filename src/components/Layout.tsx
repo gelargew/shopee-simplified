@@ -4,60 +4,23 @@ import '../styles/Layout.css'
 
 import Logo from '../svgs/Logo.svg'
 import ShoppingCart from '../svgs/ShoppingCart.svg'
+import useWindowSize from '../utils/useWindowSize'
 import Chat from './Chat'
+import Header from './Header'
+import HeaderMobile from './HeaderMobile'
 
 
 export default function Layout({...props}) {
-
-    useLayoutEffect(() => {
-        console.log('hhelo')
-        const ff = e => {
-            console.log(e)
-        }
-        document.querySelector('body').addEventListener('scroll', ff)
-
-        return () => document.querySelector('body').removeEventListener('scroll', ff)
-    }, [])
+    const windowSize = useWindowSize()
 
     return (
         <>
-            <header>
-                <div className='header-container'>
-                    <Chat />
-                    <div id='header-contact'>
-                        <a href='#'>Seller Center</a>|
-                        <a href='#'>Download</a>|
-                        <span>
-                            Ikuti kami di 
-                        </span>
-                        <a href='#'>f</a>
-                        <a href='#'>i</a>
-                    </div>
-                    
-                    <div id='header-user-profile'>
-                        <a href='#'>Notifikasi</a>
-                        <a href='#'>Bantuan</a>
-                        <a href="#">Daftar</a>|
-                        <a href='#'>Login</a>
-                    </div>
-
-                    <a href='#' id='header-logo'>
-                        <Logo />
-                    </a>
-
-                    <input id='search-bar' placeholder='search' />
-
-                    <div id='header-latest-search'>
-                        <a href='#'>Wacom One</a>
-                        <a href='#'>RTX 3090</a>
-                        <a href='#'>M1</a>
-                    </div>
-                    
-                    <a href='#' id='header-cart'>
-                        <ShoppingCart />
-                    </a>
-                </div>
-            </header>
+            {windowSize.x > 900 ?
+            <>
+                <Header />
+                <Chat/ >
+            </>:
+            <HeaderMobile />}
             {props.children}
             <footer>
                 <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore 
@@ -75,8 +38,7 @@ export default function Layout({...props}) {
                     veniam, quis nostrum exercitationem ullam corporis suscipit laboriosam, nisi ut aliquid ex ea 
                     commodi consequatur? Quis autem vel eum iure reprehenderit qui in ea voluptate velit esse quam 
                     nihil molestiae consequatur, vel illum qui dolorem eum fugiat quo voluptas nulla pariatur?</p>
-            </footer>
-            
+            </footer>           
         </>
     )
 }

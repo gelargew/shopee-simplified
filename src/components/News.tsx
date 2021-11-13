@@ -8,8 +8,9 @@ const NEWS = [
 ]
 
 const imageURLS = [
-    '/images/sale1.jpg',
-    '/images/sale2.jpg'
+    '/images/sale_landscape1.jpg',
+    '/images/sale_landscape2.jpg',
+    '/images/sale_landscape3.jpg'
 ]
 
 export default function News({...props}) {
@@ -18,8 +19,8 @@ export default function News({...props}) {
     return (
         <section id='section-news' {...props}>
             <ImageSlider className='news-image-slider' imageURLS={imageURLS} />
-            <div id='promo-1'>PROMO 1</div>
-            <div id='promo-2'>PROMO 2</div>
+            <img id='promo-1' src='/images/sale_landscape1.jpg'></img>
+            <img id='promo-2'src='/images/sale_landscape2.jpg'></img>
             <div id='promo-links'>
                 <a href='#'>
                     <img src='https://cf.shopee.co.id/file/d7385c2d6fb6d57c647a09fad1114e14_xhdpi' />

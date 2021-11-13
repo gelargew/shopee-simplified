@@ -14,7 +14,7 @@ export default function Mall() {
     return (
         <section id='section-mall'>
             <h3>SHOPEE MALL</h3>
-            <span>
+            <span id='mall-detail'>
                 7 Hr Pengembalian
                 100% Ori
                 Gratis Ongkir

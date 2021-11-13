@@ -1,9 +1,10 @@
 import React from 'react'
+import Watermark from './commons/Watermark'
 
 const PRODUCT =  {
         id: 43312,
         name: 'hallowen props',
-        imageURL: '/images/sale1.jpg',
+        imageURL: '/images/product1.jpg',
         price: 99999.99,
         sold_count: 1000,
         seller: {

@@ -210,21 +210,35 @@ button .hidden {
 }
 
 #section-mall h3 {
+    display: flex;
+    place-items: center;
     grid-area: header;
     padding: 0.5rem 1rem;
     font-size: x-large;
     height: auto;
+    border-bottom: 0.4px solid var(--color-shadow-light);
 }
 
-#section-mall > span {
+#mall-detail {
+    display: flex;
+    place-items: center;
+    justify-content: center;
     grid-area: text;
+    height: auto;
     text-align: center;
     font-size: small;
     padding: 0.5rem 1rem;
+    color: var(--color-accent-main);
+    font-weight: bolder;
+    border-bottom: 0.4px solid var(--color-shadow-light);
 }
 
 #section-mall .img-slider-container {
     grid-area: image;
+}
+
+#section-mall .slider-img {
+    background: rgba(0, 0, 0, 0.288);
 }
 
 #section-mall > #mall-products {
@@ -357,6 +371,8 @@ button .hidden {
         "products products products";
         grid-template-rows: 4rem auto;
     }
+
+
 
     #section-mall .img-slider-container {
         display: none;

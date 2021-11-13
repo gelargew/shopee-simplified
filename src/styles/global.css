@@ -14,6 +14,7 @@
 html, body {
     margin: 0;
     background: rgb(241, 241, 241);
+    font-family: 'Roboto';
 }
 
 
@@ -37,3 +38,10 @@ main > section * {
     background: var(--color-accent-main);
     border-radius: 2px;
 }
+
+@media screen and (max-width: 600px) {
+    ::-webkit-scrollbar, ::-webkit-scrollbar-thumb {
+        display: none;
+    }
+}
+
