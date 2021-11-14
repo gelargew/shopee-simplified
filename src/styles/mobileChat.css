@@ -1,10 +1,10 @@
 #mobile-main {
     display: grid;
     height: 100vh;
-    grid-template-areas: "contacts title"
-    "contacts chat-body"
-    "chat-input chat-input";
-    grid-template-columns: 80px auto;
+    grid-template-areas: 
+    "title"
+    "chat-body"
+    "chat-input";
     grid-template-rows: 40px auto minmax(40px, 80px);
     gap: 0;
 }
@@ -26,17 +26,61 @@
 #chat-body {
     grid-area: chat-body;
     background:var(--color-bg-main);
+    flex-direction: column;
+    place-items: flex-start;
     justify-content: flex-start;
+    gap: 0.4rem;
+    overflow-y: auto;
 }
 
-#chat-body>* {
+#chat-body > * {
     background: var(--color-text-accent);
     padding: 0.4rem 0.4rem 0.4rem 1rem;
+    margin: 0;
+    min-width: 30px;
+    max-width: 70%;
+    min-height: 1rem;
+    word-break: break-all;
     border-radius: 3px;
     box-shadow: 0.4px 0.4px 0.2px var(--color-shadow-light);
 
 }
 
 #chat-form {
+    background: var(--color-text-accent);
     grid-area: chat-input;
+    width: 95%;
+    height: 90%;
+    border-radius: 5px;
+    padding: 0.2rem;
+    box-shadow: 2px 2px 1px var(--color-shadow-light), 0 -1px 0.4px var(--color-shadow-light);
+}
+
+#chat-form textarea {
+    height: 100%;
+    flex: 1;
+    border: none;
+}
+
+#chat-form textarea:focus {
+    outline: none;
+}
+
+#chat-form button {
+    place-self: flex-end;
+    background: none;
+    border: none;
+}
+
+#chat-form button:active {
+    background: var(--color-shadow-light);
+}
+
+.back-button {
+    position: fixed;
+    z-index: 2;
+    top: 0;
+    right: 0;
+    margin: 0.4rem;
+    width: 2rem;
 }

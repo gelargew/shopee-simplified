@@ -41,9 +41,33 @@ main > section * {
     border-radius: 2px;
 }
 
+button {
+    background: none;
+    border: none;
+    border-radius: 4px;
+}
+
+button:hover, a:hover {
+    cursor: pointer;
+}
+
+button:active {
+    background: var(--color-shadow-light);
+}
+
+
 @media screen and (max-width: 600px) {
     ::-webkit-scrollbar, ::-webkit-scrollbar-thumb {
         display: none;
     }
 }
 
+
+
+.disabled {
+    color: var(--color-shadow);
+}
+
+.disabled:hover {
+    cursor: default;
+}

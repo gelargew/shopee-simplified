@@ -13,20 +13,14 @@ export default function HeaderMobile() {
             <button className='nav-toggle' onClick={() => setShowNavigation(!showNavigation)} >
                 {showNavigation ? <IconClose /> : <IconNav />}
             </button>
-            {showNavigation && <NavigationMobile />}
+            {showNavigation && 
+            <div id='nav-mobile'>
+                <a onClick={() => setShowNavigation(false)}>HOME</a>
+                <a href='#' className='disabled'>AKUN</a>
+                <a href='#' className='disabled'>TRANSAKSI</a>
+                <Link to='/MobileChat'>CHAT</Link>
+            </div>}
         </header>
     )
 }
 
-
-const NavigationMobile = () => {
-
-    return (
-        <div id='nav-mobile'>
-            <Link to='/'>HOME</Link>
-            <a href='#'>AKUN</a>
-            <a href='#'>TRANSAKSI</a>
-            <Link to='/MobileChat'>CHAT</Link>
-        </div>
-    )
-}
