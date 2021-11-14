@@ -8,6 +8,7 @@
     --color-text-accent: white;
     --color-shadow: rgba(0, 0, 0, 0.233);
     --color-shadow-light: rgba(0, 0, 0, 0.1);
+    --chat-background: linear-gradient(-180deg, red, 10%, blue);
 
 }
 
@@ -28,6 +29,7 @@ main > section * {
 }
 
 ::-webkit-scrollbar {
+    background: var(--color-shadow-light);
     width: 5px;
     height: 5px;
     border-radius: 2px;
@@ -35,7 +37,7 @@ main > section * {
 
 
 ::-webkit-scrollbar-thumb {
-    background: var(--color-accent-main);
+    background: var(--color-shadow);
     border-radius: 2px;
 }
 

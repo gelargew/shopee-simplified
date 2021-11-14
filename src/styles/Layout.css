@@ -253,8 +253,10 @@ footer>p {
     stroke-width: 80;
 }
 
-.nav-toggle:active {
+
+.nav-toggle:hover {
     background: var(--color-shadow-light);
+    cursor: pointer;
 }
 
 #nav-mobile {

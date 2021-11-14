@@ -1,0 +1,42 @@
+#mobile-main {
+    display: grid;
+    height: 100vh;
+    grid-template-areas: "contacts title"
+    "contacts chat-body"
+    "chat-input chat-input";
+    grid-template-columns: 80px auto;
+    grid-template-rows: 40px auto minmax(40px, 80px);
+    gap: 0;
+}
+
+#mobile-main>* {
+    width: 100%;
+    height: 100%;
+    padding: 1rem;
+    box-sizing: border-box;
+    display: flex;
+    place-items: center;
+    justify-content: center;
+}
+
+#chat-title {
+    grid-area: title;
+}
+
+#chat-body {
+    grid-area: chat-body;
+    background:var(--color-bg-main);
+    justify-content: flex-start;
+}
+
+#chat-body>* {
+    background: var(--color-text-accent);
+    padding: 0.4rem 0.4rem 0.4rem 1rem;
+    border-radius: 3px;
+    box-shadow: 0.4px 0.4px 0.2px var(--color-shadow-light);
+
+}
+
+#chat-form {
+    grid-area: chat-input;
+}
