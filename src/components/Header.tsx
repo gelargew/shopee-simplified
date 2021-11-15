@@ -1,6 +1,7 @@
 import React from 'react'
 import Logo from '../svgs/Logo.svg'
 import ShoppingCartLogo from '../svgs/ShoppingCart.svg'
+import Watermark from './commons/Watermark'
 
 export default function Header() {
 
@@ -24,6 +25,7 @@ export default function Header() {
                     <a href='#'>Login</a>
                 </div>
                 <a href='#' id='header-logo'>
+                    <Watermark>NOT</Watermark>
                     <Logo />
                 </a>
 

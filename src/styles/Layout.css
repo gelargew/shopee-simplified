@@ -102,6 +102,7 @@ footer>p {
         grid-area: logo;
         display: flex;
         margin-right: 5px;
+        position: relative;
     }
     
 

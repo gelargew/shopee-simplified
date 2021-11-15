@@ -1,6 +1,6 @@
 import React, { FormEvent, useRef, useState } from 'react'
 import { Link } from 'gatsby'
-import HeaderMobile from '../components/HeaderMobile'
+import { Helmet } from 'react-helmet'
 import ArrowEnter from '../svgs/ArrowEnter.svg'
 import ArrowBack from '../svgs/ArrowBack.svg'
 import '../styles/mobileChat.css'
@@ -22,7 +22,11 @@ export default function MobileChat() {
     return (
         <>
             <main id='mobile-main'>
-                
+                <Helmet>
+                    <title>not Shopee</title>
+                    <link rel="icon" type="image/png" href="/ShoppingCart.png"></link>
+                    <link rel="alternate icon" type="image/png" href="/images/icon.png"></link>
+                </Helmet>
                 <h4 id='chat-title' >Chat</h4>
                 <div id='chat-body'>
                     {chats.map((chat, idx) => <p className='chat-text' key={idx}>{chat}</p>)}
