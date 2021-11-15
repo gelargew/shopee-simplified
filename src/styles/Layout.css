@@ -9,11 +9,13 @@ header a {
 }
 
 footer {
+    position: relative;
     display: flex;
     flex-direction: column;
     place-items: center;
     justify-content: space-around;
     margin-top: 5rem;
+    padding-bottom: 10rem;
     border-top: 2px solid var(--color-accent-main);
     background: rgb(243, 243, 243);
     color: var(--color-text-dim);
@@ -24,6 +26,15 @@ footer {
 footer>p {
     text-align: justify;
     max-width: 1200px;
+}
+
+footer a {
+    text-decoration: none;
+    position: absolute;
+    bottom: 0;
+    margin: 0.4rem;
+    color: var(--color-text-dim);
+    opacity: 0.6;
 }
 
 
